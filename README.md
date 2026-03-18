@@ -3,6 +3,10 @@
 
 # PromptKit
 
+<p align="center">
+  <img src="PromptKit-logo.png" alt="PromptKit logo — composable prompt toolkit" width="400">
+</p>
+
 A composable, versioned library of prompt templates for software engineering tasks.
 Designed for software engineers who design, develop, and debug software.
 
