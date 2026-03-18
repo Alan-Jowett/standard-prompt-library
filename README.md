@@ -25,23 +25,18 @@ Clone the repo and point Copilot at the bootstrap prompt:
 git clone https://github.com/Alan-Jowett/standard-prompt-library.git
 cd standard-prompt-library
 
-# Start an interactive session — Copilot reads the bootstrap,
-# discovers the library via manifest.yaml, and guides you.
-copilot "Read bootstrap.md and help me build a prompt for my task"
+# Copilot reads bootstrap.md, discovers the library via manifest.yaml,
+# asks what you need, assembles the prompt, and writes it to a file.
+gh copilot "Read bootstrap.md and execute the prompt"
 ```
 
-Copilot will read the manifest, ask what you need, select the right
-persona/protocols/format/template, fill in parameters, and write
-the assembled prompt to a file you specify.
-
-### Using with Claude Code (Anthropic CLI)
+### Using with Claude Code
 
 ```bash
 cd standard-prompt-library
 
-# Claude Code can read local files, so just point it at the bootstrap.
-claude "Read bootstrap.md and the manifest.yaml in this directory. \
-       Help me assemble a prompt to investigate a memory leak in C code."
+# Claude Code can read local files — point it at the bootstrap.
+claude "Read bootstrap.md and execute the prompt"
 ```
 
 ### Using with any LLM (manual)
