@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
 ---
 name: spl-design
@@ -14,8 +14,8 @@ applicable_to:
 
 # Protocol: SPL Component Design
 
-Apply this protocol when designing a new component for the Standard
-Prompt Library. Execute all phases before generating files.
+Apply this protocol when designing a new component for
+PromptKit. Execute all phases before generating files.
 
 ## Phase 1: Use Case Analysis
 
@@ -77,7 +77,7 @@ Before generating files, verify the design against CONTRIBUTING.md:
 
 1. **Naming**: kebab-case file names matching the component `name` field.
 2. **Frontmatter**: all required fields for the component type.
-3. **SPDX headers**: MIT license, Standard Prompt Library Contributors.
+3. **SPDX headers**: MIT license, PromptKit Contributors.
 4. **Cross-references**: protocols referenced by path in template
    frontmatter, formats by name.
 5. **Manifest update**: every new component must be added to

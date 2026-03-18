@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) Standard Prompt Library Contributors
+# Copyright (c) PromptKit Contributors
 
-# Standard Prompt Library — Manifest
+# PromptKit — Manifest
 # This file indexes all components in the library.
 # The bootstrap prompt reads this manifest to discover available
 # personas, protocols, formats, and task templates.

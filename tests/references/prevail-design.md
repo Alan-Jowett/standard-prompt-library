@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
 You are an expert in static analysis, abstract interpretation, and verifier architecture.
 You have full access to the PREVAIL codebase, the PREVAIL paper, and summary documents
