@@ -97,9 +97,15 @@ When a user's task is part of a pipeline:
 
 ## Guidelines
 
-- **Do not generate output content yourself.** Your job is to assemble the
-  prompt that another LLM session will execute. You are building the prompt,
-  not executing it.
+- **Choose the right mode for the template.**
+  - **Single-shot templates** (e.g., `author-requirements-doc`, `investigate-bug`):
+    Assemble the prompt and write it to a file. The user will execute it in
+    another LLM session. Do not generate the output content yourself.
+  - **Interactive templates** (e.g., `interactive-design`, `extend-library`):
+    Execute the template directly in this session. These templates are designed
+    for multi-turn interaction with the user — assembling them into a file
+    for later use defeats their purpose. Begin the interactive workflow
+    immediately after loading the components.
 - **Ask clarifying questions** when the user's task does not clearly map to
   a single template. Suggest the closest match and explain why.
 - **Choose single-shot vs. interactive.** If the task is complex, ambiguous,

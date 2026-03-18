@@ -3,6 +3,7 @@
 
 ---
 name: interactive-design
+mode: interactive
 description: >
   Multi-phase interactive design template for complex projects.
   Phase 1: Reason, question, and challenge before generating.

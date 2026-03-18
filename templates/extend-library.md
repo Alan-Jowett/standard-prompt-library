@@ -3,6 +3,7 @@
 
 ---
 name: extend-library
+mode: interactive
 description: >
   Guide a contributor through designing and building new SPL components.
   Uses the interactive-design workflow: reason through the design,
