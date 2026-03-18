@@ -34,6 +34,13 @@ personas:
       conventions, and quality standards. Guides contributors through
       designing and building new components.
 
+  - name: devops-engineer
+    path: personas/devops-engineer.md
+    description: >
+      Senior DevOps / platform engineer. Deep expertise in CI/CD pipelines,
+      release engineering, infrastructure-as-code, and platform APIs across
+      GitHub Actions, Azure DevOps, GitLab CI, and other DevOps platforms.
+
 protocols:
   guardrails:
     - name: anti-hallucination
@@ -109,6 +116,13 @@ protocols:
         component type selection, dependency analysis, and convention
         compliance.
 
+    - name: devops-platform-analysis
+      path: protocols/reasoning/devops-platform-analysis.md
+      description: >
+        Systematic reasoning about DevOps platform constructs: pipelines,
+        triggers, jobs, environments, secrets, approvals, and artifacts.
+        Platform-agnostic methodology with platform-specific instantiation.
+
 formats:
   - name: requirements-doc
     path: formats/requirements-doc.md
@@ -154,6 +168,27 @@ formats:
     description: >
       Output format for SPL contributions. Produces PR-ready component
       files, manifest update, and pull request description.
+
+  - name: pipeline-spec
+    path: formats/pipeline-spec.md
+    produces: pipeline-spec
+    description: >
+      CI/CD pipeline specification with platform-specific YAML, design
+      rationale, configuration requirements, and deployment notes.
+
+  - name: triage-report
+    path: formats/triage-report.md
+    produces: triage-report
+    description: >
+      Prioritized triage report for issues, pull requests, or work items.
+      Classifies items by priority, effort, and recommended action.
+
+  - name: release-notes
+    path: formats/release-notes.md
+    produces: release-notes
+    description: >
+      Structured release notes with changelog, breaking changes, upgrade
+      instructions, and contributor acknowledgment.
 
 taxonomies:
   - name: stack-lifetime-hazards
@@ -262,6 +297,61 @@ templates:
       persona: spl-contributor
       protocols: [anti-hallucination, self-verification, spl-design]
       format: spl-pull-request
+
+  devops:
+    - name: author-pipeline
+      path: templates/author-pipeline.md
+      description: >
+        Generate a production-ready CI/CD pipeline for a given application
+        and target platform. Supports GitHub Actions, Azure DevOps, GitLab CI.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification, devops-platform-analysis]
+      format: pipeline-spec
+
+    - name: triage-issues
+      path: templates/triage-issues.md
+      description: >
+        Triage and prioritize open issues or work items. Classify by
+        priority and effort, identify patterns, recommend a workflow.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification]
+      format: triage-report
+
+    - name: triage-pull-requests
+      path: templates/triage-pull-requests.md
+      description: >
+        Triage open pull requests to identify which need review, are stale,
+        have conflicts, or are ready to merge. Prioritize review effort.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification]
+      format: triage-report
+
+    - name: root-cause-ci-failure
+      path: templates/root-cause-ci-failure.md
+      description: >
+        Investigate a failing CI/CD pipeline run. Analyze logs, pipeline
+        configuration, and platform behavior. Produce an investigation report.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification, root-cause-analysis, devops-platform-analysis]
+      format: investigation-report
+
+    - name: author-release
+      path: templates/author-release.md
+      description: >
+        Generate structured release notes from commits, PRs, and issues
+        between two versions. Changelog, breaking changes, upgrade instructions.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification]
+      format: release-notes
+
+    - name: review-infrastructure
+      path: templates/review-infrastructure.md
+      description: >
+        Review infrastructure-as-code (Terraform, Bicep, ARM, Pulumi,
+        CloudFormation) for correctness, security, and best practices.
+      persona: devops-engineer
+      protocols: [anti-hallucination, self-verification, security-vulnerability]
+      format: investigation-report
 
 pipelines:
   document-lifecycle:
