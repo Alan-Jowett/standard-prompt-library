@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
-# Contributing to the Standard Prompt Library
+# Contributing to PromptKit
 
-## Preferred Workflow: Use the SPL to Extend Itself
+## Preferred Workflow: Use PromptKit to Extend Itself
 
 The recommended way to add new components is to **use the library's own
 `extend-library` template**, not to hand-author files. This ensures new
@@ -11,7 +11,7 @@ components follow the library's conventions, fit the architecture, and
 include all required metadata.
 
 ```bash
-cd standard-prompt-library
+cd promptkit
 gh copilot "Read bootstrap.md and execute the prompt"
 # Then: "I want to add a template for <your use case>"
 ```
@@ -28,7 +28,7 @@ review and manual use if needed.
 
 ## Adding New Components
 
-The SPL is designed to be extended. You can add new personas, protocols,
+PromptKit is designed to be extended. You can add new personas, protocols,
 formats, and templates by following the conventions below.
 
 ### General Rules

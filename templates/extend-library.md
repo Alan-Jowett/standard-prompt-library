@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
 ---
 name: extend-library
@@ -26,10 +26,10 @@ output_contract:
     and a pull request description.
 ---
 
-# Task: Extend the Standard Prompt Library
+# Task: Extend PromptKit
 
 You are tasked with guiding a contributor through designing and building
-new components for the Standard Prompt Library.
+new components for PromptKit.
 
 ## Inputs
 
@@ -118,7 +118,7 @@ Once the user is satisfied with the generated files:
 
 Before presenting files, verify:
 
-- [ ] All files have SPDX headers (MIT, Standard Prompt Library Contributors)
+- [ ] All files have SPDX headers (MIT, PromptKit Contributors)
 - [ ] YAML frontmatter is valid and complete for each component type
 - [ ] File names are kebab-case and match the `name` field
 - [ ] Template has input/output contracts defined

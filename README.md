@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
-# Standard Prompt Library (SPL)
+# PromptKit
 
 A composable, versioned library of prompt templates for software engineering tasks.
 Designed for software engineers who design, develop, and debug software.
@@ -22,8 +22,8 @@ You → bootstrap.md → LLM reads manifest → selects components → assembled
 Clone the repo and point Copilot at the bootstrap prompt:
 
 ```bash
-git clone https://github.com/Alan-Jowett/standard-prompt-library.git
-cd standard-prompt-library
+git clone https://github.com/Alan-Jowett/promptkit.git
+cd promptkit
 
 # Copilot reads bootstrap.md, discovers the library via manifest.yaml,
 # asks what you need, assembles the prompt, and writes it to a file.
@@ -33,7 +33,7 @@ gh copilot "Read bootstrap.md and execute the prompt"
 ### Using with Claude Code
 
 ```bash
-cd standard-prompt-library
+cd promptkit
 
 # Claude Code can read local files — point it at the bootstrap.
 claude "Read bootstrap.md and execute the prompt"
@@ -181,7 +181,7 @@ The output of one template becomes the input parameter of the next.
      formats/, and templates/. -->
 
 ```
-standard-prompt-library/
+promptkit/
 ├── README.md               # This file
 ├── CONTRIBUTING.md          # Guidelines for extending the library
 ├── TESTING.md              # Prompt unit testing methodology

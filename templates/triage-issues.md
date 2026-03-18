@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
 ---
 name: triage-issues

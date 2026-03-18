@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT -->
-<!-- Copyright (c) Standard Prompt Library Contributors -->
+<!-- Copyright (c) PromptKit Contributors -->
 
 You are a code-analysis agent with access to the target codebase and standard engineering tools available in this environment.
 
