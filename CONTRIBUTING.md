@@ -3,6 +3,29 @@
 
 # Contributing to the Standard Prompt Library
 
+## Preferred Workflow: Use the SPL to Extend Itself
+
+The recommended way to add new components is to **use the library's own
+`extend-library` template**, not to hand-author files. This ensures new
+components follow the library's conventions, fit the architecture, and
+include all required metadata.
+
+```bash
+cd standard-prompt-library
+gh copilot "Read bootstrap.md and execute the prompt"
+# Then: "I want to add a template for <your use case>"
+```
+
+The `extend-library` workflow will:
+1. Ask clarifying questions about your use case
+2. Determine which components are needed (persona, protocol, format, taxonomy, template)
+3. Generate PR-ready files that conform to all conventions below
+4. Produce a manifest update and PR description
+
+The conventions below are the reference specification — the `extend-library`
+workflow applies them automatically, but they are documented here for
+review and manual use if needed.
+
 ## Adding New Components
 
 The SPL is designed to be extended. You can add new personas, protocols,
