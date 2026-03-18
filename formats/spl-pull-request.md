@@ -28,25 +28,21 @@ For each new component, produce the **complete file content** with:
 
 Present each file as:
 
-```
-### File: <path relative to repo root>
+    ### File: <path relative to repo root>
 
-\`\`\`markdown
-<complete file content>
-\`\`\`
-```
+    ```markdown
+    <complete file content>
+    ```
 
 ### 2. Manifest Update
 
 Show the **exact additions** to `manifest.yaml`:
 
-```
-### Manifest additions (add to manifest.yaml)
+    ### Manifest additions (add to manifest.yaml)
 
-\`\`\`yaml
-<YAML fragment to insert, with a comment indicating where it goes>
-\`\`\`
-```
+    ```yaml
+    <YAML fragment to insert, with a comment indicating where it goes>
+    ```
 
 ### 3. Pull Request Description
 
