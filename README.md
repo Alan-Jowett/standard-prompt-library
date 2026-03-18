@@ -17,6 +17,46 @@ Designed for software engineers who design, develop, and debug software.
 You → bootstrap.md → LLM reads manifest → selects components → assembled prompt → LLM → output
 ```
 
+### Using with GitHub Copilot CLI
+
+Clone the repo and point Copilot at the bootstrap prompt:
+
+```bash
+git clone https://github.com/Alan-Jowett/standard-prompt-library.git
+cd standard-prompt-library
+
+# Start an interactive session — Copilot reads the bootstrap,
+# discovers the library via manifest.yaml, and guides you.
+copilot "Read bootstrap.md and help me build a prompt for my task"
+```
+
+Copilot will read the manifest, ask what you need, select the right
+persona/protocols/format/template, fill in parameters, and write
+the assembled prompt to a file you specify.
+
+### Using with Claude Code (Anthropic CLI)
+
+```bash
+cd standard-prompt-library
+
+# Claude Code can read local files, so just point it at the bootstrap.
+claude "Read bootstrap.md and the manifest.yaml in this directory. \
+       Help me assemble a prompt to investigate a memory leak in C code."
+```
+
+### Using with any LLM (manual)
+
+If your tool doesn't have file access, paste the bootstrap prompt
+into a session along with the manifest, then follow the interactive flow:
+
+```
+1. Copy the contents of bootstrap.md into a new LLM chat.
+2. Copy the contents of manifest.yaml into the same chat.
+3. Describe your task.
+4. The LLM will tell you which files to paste in (persona, protocols, etc.)
+5. Paste the requested files, get the assembled prompt back.
+```
+
 ## Architecture
 
 The library uses **4 composable layers**:
