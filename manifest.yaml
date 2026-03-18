@@ -27,6 +27,13 @@ personas:
       Staff software architect. System design, API contracts, tradeoff
       analysis, and long-term maintainability.
 
+  - name: spl-contributor
+    path: personas/spl-contributor.md
+    description: >
+      SPL contribution guide. Understands the library's architecture,
+      conventions, and quality standards. Guides contributors through
+      designing and building new components.
+
 protocols:
   guardrails:
     - name: anti-hallucination
@@ -95,6 +102,13 @@ protocols:
         preserving structural integrity, numbering, cross-references,
         and internal consistency.
 
+    - name: spl-design
+      path: protocols/reasoning/spl-design.md
+      description: >
+        Reasoning protocol for designing new SPL components. Scoping,
+        component type selection, dependency analysis, and convention
+        compliance.
+
 formats:
   - name: requirements-doc
     path: formats/requirements-doc.md
@@ -133,6 +147,13 @@ formats:
       Multi-file output format for tasks producing multiple deliverables
       (structured data, reports, coverage logs). Defines artifact manifests,
       per-artifact schemas, and cross-artifact consistency rules.
+
+  - name: spl-pull-request
+    path: formats/spl-pull-request.md
+    produces: spl-contribution
+    description: >
+      Output format for SPL contributions. Produces PR-ready component
+      files, manifest update, and pull request description.
 
 taxonomies:
   - name: stack-lifetime-hazards
@@ -231,6 +252,16 @@ templates:
         changes that maintain correctness at each step.
       persona: software-architect
       protocols: [anti-hallucination]
+
+  contribution:
+    - name: extend-library
+      path: templates/extend-library.md
+      description: >
+        Guide a contributor through designing and building new SPL
+        components. Interactive workflow producing PR-ready files.
+      persona: spl-contributor
+      protocols: [anti-hallucination, self-verification, spl-design]
+      format: spl-pull-request
 
 pipelines:
   document-lifecycle:

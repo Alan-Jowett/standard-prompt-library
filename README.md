@@ -54,7 +54,7 @@ into a session along with the manifest, then follow the interactive flow:
 
 ## Architecture
 
-The library uses **4 composable layers**:
+The library uses **5 composable layers**:
 
 | Layer | Purpose | Directory |
 |-------|---------|-----------|
@@ -66,9 +66,10 @@ The library uses **4 composable layers**:
 
 ### Composition
 
-A task template references a persona, one or more protocols, and a format.
-The bootstrap prompt reads the `manifest.yaml` to discover available components,
-then assembles them into a single coherent prompt based on the user's needs.
+A task template references a persona, one or more protocols, an optional
+taxonomy, and a format. The bootstrap prompt reads the `manifest.yaml` to
+discover available components, then assembles them into a single coherent
+prompt based on the user's needs.
 
 <!-- Alt-text: Diagram showing how an assembled prompt is composed from four
      layers stacked vertically: Persona (identity), Protocol (reasoning
